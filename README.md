@@ -98,3 +98,9 @@ This is the place for you to write reflections:
 2. lazy_static digunakan di Rust untuk mendefinisikan variabel sebagai singleton yang berarti hanya satu instansi dari variabel tersebut yang akan ada dalam suatu program. Berbeda dengan Java, di Rust variabel statis dibuat tidak dapat diubah (immutable) untuk memastikan security dalam penggunaan di konteks multi-threading. Fitur ini sangat penting karena mendukung stabilitas dan keamanan data di lingkungan yang melibatkan akses oleh banyak thread tanpa memerlukan hal hal yang biasanya diperlukan jika data tersebut mutable.
 
 #### Reflection Subscriber-2
+
+1. src/lib.rs berisi tentang informasi seperti error response dan root URL yang diperlukan oleh bagian-bagian pada aplikasi lainnya.
+
+2. Ya. Desain penulisan kode yang dilakukan memungkinkan penambahan jenis observer baru mudah dilakukan. Hal ini disebabkan karena program memenuhi prinsip open close untuk perubahan tersebut sehingga kita tetap dapat menginstansiasi lebih dari 1 main app.
+
+3. Ya. Testing atau collection pada Postman memungkinkan saya untuk mengetahui kebenaran logika program saya. Selain itu, collection Postman juga membantu saya dalam memverifikasi apakah program berjalan sesuai ekspektasi kita atau tidak.
